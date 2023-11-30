@@ -9,7 +9,7 @@ public static class AbilityBehavioursFactory
     switch (behaviourId)
     {
       case "Damage":
-        return new DirectDamage();
+        return new DirectDamage("damage");
       default:
         throw new NotSupportedException();
     }

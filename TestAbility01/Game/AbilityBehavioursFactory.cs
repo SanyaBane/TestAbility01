@@ -1,10 +1,10 @@
-﻿using TestAbility01.AbilitySystem;
+﻿using TestAbility01.AbilitySystem.Abstractions.Interfaces;
 
 namespace TestAbility01.Game;
 
 public static class AbilityBehavioursFactory
 {
-  public static AbilityBehaviour CreateBehaviour(string behaviourId)
+  public static IAbilityBehaviour CreateBehaviour(string behaviourId)
   {
     switch (behaviourId)
     {

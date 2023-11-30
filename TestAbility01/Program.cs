@@ -1,4 +1,5 @@
 ﻿using TestAbility01.AbilitySystem;
+using TestAbility01.AbilitySystem.Abstractions.Interfaces;
 using TestAbility01.Game;
 
 namespace TestAbility01
@@ -9,7 +10,7 @@ namespace TestAbility01
     {
       var actor = new Actor("Alex");
       
-      var behaviours = new List<AbilityBehaviour>();
+      var behaviours = new List<IAbilityBehaviour>();
       
       var damageBehaviour = AbilityBehavioursFactory.CreateBehaviour("Damage");
       behaviours.Add(damageBehaviour);
@@ -17,7 +18,7 @@ namespace TestAbility01
       var ability = new Ability(actor, "Fireball", behaviours);
       ability.Execute();
 
-      Console.ReadLine();
+      // Console.ReadLine();
     }
   }
 }

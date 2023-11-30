@@ -5,9 +5,9 @@ namespace TestAbility01.AbilitySystem;
 public class Ability
 {
   private readonly IAbilityActor _actor;
-  private readonly List<AbilityBehaviour> _abilityBehaviours;
+  private readonly List<IAbilityBehaviour> _abilityBehaviours;
 
-  public Ability(IAbilityActor actor, string abilityName, List<AbilityBehaviour> abilityBehaviours)
+  public Ability(IAbilityActor actor, string abilityName, List<IAbilityBehaviour> abilityBehaviours)
   {
     _actor = actor;
     AbilityName = abilityName;
